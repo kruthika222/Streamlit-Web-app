@@ -7,9 +7,6 @@ import streamlit as st
 from keras.utils import pad_sequences
 import pandas as pd
 
-import requests
-from pathlib import Path
-
 from keras.models import load_model
 model = load_model("Classifier2.pkl")
 
