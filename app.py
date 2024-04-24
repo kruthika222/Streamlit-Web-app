@@ -11,7 +11,7 @@ import requests
 from pathlib import Path
 
 def download_model():
-    url = 'https://github.com/mblk3/MLM_Atomic_Spec_Lines/raw/02f6a04db06b459169ea0d19c347146ea1ad17d8/classifier_model.pkl'
+    url = 'https://github.com/kruthika222/Streamlit-Web-app.git/Classifier2.pkl'
     local_filename = url.split('/')[-1]
     response = requests.get(url)
     open(local_filename, 'wb').write(response.content)
@@ -26,7 +26,7 @@ def is_model_found(file):
         st.write(f"DEBUG: File `{model_path.absolute()}` found! :sunglasses:")
 ...
 
-model_filename = "classifier2.pkl"
+model_filename = "Classifier2.pkl"
 is_model_found(model_filename)
 model = pd.read_pickle(model_filename)
 
