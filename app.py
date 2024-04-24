@@ -7,6 +7,34 @@ import streamlit as st
 from keras.utils import pad_sequences
 import pandas as pd
 
+import requests
+from pathlib import Path
+
+def download_model():
+    url = 'https://github.com/mblk3/MLM_Atomic_Spec_Lines/raw/02f6a04db06b459169ea0d19c347146ea1ad17d8/classifier_model.pkl'
+    local_filename = url.split('/')[-1]
+    response = requests.get(url)
+    open(local_filename, 'wb').write(response.content)
+
+def is_model_found(file):
+    model_path = Path(file)
+    found = model_path.is_file()
+    if not found:
+        st.write(f"DEBUG: File `{model_path.absolute()}` not found. Let's download it! :arrow_down:")
+        download_model()
+    else:
+        st.write(f"DEBUG: File `{model_path.absolute()}` found! :sunglasses:")
+...
+
+model_filename = "classifier2.pkl"
+is_model_found(model_filename)
+model = pd.read_pickle(model_filename)
+
+
+
+
+
+
 # loading the trained model
 pickle_in = pd.read_pickle('Classifier2.pkl') 
 pickle_in_tok = open('tokenizer2.pkl', 'rb') 
