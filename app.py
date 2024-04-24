@@ -7,8 +7,7 @@ import streamlit as st
 from keras.utils import pad_sequences
 import pandas as pd
 
-from keras.models import load_model
-model = load_model("Classifier2.pkl")
+
 
 def download_model():
     url = 'https://github.com/kruthika222/Streamlit-Web-app.git/Classifier2.pkl'
