@@ -7,7 +7,8 @@ import streamlit as st
 from keras.utils import pad_sequences
 import pandas as pd
 
-
+with open("Classifier2.pkl", "rb") as f:
+     data = pickle.load(f)
 '''
 def download_model():
     url = 'https://github.com/kruthika222/Streamlit-Web-app.git/Classifier2.pkl'
