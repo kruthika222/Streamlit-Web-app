@@ -1,4 +1,4 @@
-
+pip install tensorflow
 
 #conda install --yes --file requirements.txt
 
