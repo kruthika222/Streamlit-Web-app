@@ -1,6 +1,6 @@
 
 
-#conda install --yes --file requirements.txt
+conda install --yes --file requirements.txt
 
 import pickle
 import streamlit as st
@@ -8,7 +8,7 @@ from keras.utils import pad_sequences
 import pandas as pd
 
 
-
+'''
 def download_model():
     url = 'https://github.com/kruthika222/Streamlit-Web-app.git/Classifier2.pkl'
     local_filename = url.split('/')[-1]
@@ -23,12 +23,12 @@ def is_model_found(file):
         download_model()
     else:
         st.write(f"DEBUG: File `{model_path.absolute()}` found! :sunglasses:")
-...
+
 
 model_filename = "Classifier2.pkl"
 is_model_found(model_filename)
 model = pd.read_pickle(model_filename)
-
+'''
 
 
 
