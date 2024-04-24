@@ -1,6 +1,7 @@
  
 import pickle
 import streamlit as st
+import tensorflow
 from tensorflow import keras
 from keras.utils import pad_sequences
 #from keras_preprocessing.sequence import pad_sequences
