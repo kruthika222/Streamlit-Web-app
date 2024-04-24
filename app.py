@@ -16,9 +16,9 @@ classifier = load_model('Classifier_model.h5')
 
 
 # loading the trained model
-pickle_in = open('Classifier2.pkl','rb') 
+#pickle_in = open('Classifier2.pkl','rb') 
 pickle_in_tok = open('tokenizer2.pkl', 'rb') 
-classifier = pickle.load(pickle_in)
+#classifier = pickle.load(pickle_in)
 tokenizer = pickle.load(pickle_in_tok)
 
 @st.cache_data()
