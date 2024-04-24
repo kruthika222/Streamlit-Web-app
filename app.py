@@ -1,6 +1,6 @@
-pip install tensorflow
 
-#conda install --yes --file requirements.txt
+
+conda install --yes --file requirements.txt
 
 import pickle
 import streamlit as st
