@@ -7,29 +7,9 @@ import streamlit as st
 from keras.utils import pad_sequences
 import pandas as pd
 
-with open("Classifier2.pkl", "rb") as f:
-     data = pickle.load(f)
-'''
-def download_model():
-    url = 'https://github.com/kruthika222/Streamlit-Web-app.git/Classifier2.pkl'
-    local_filename = url.split('/')[-1]
-    response = requests.get(url)
-    open(local_filename, 'wb').write(response.content)
+from tensorflow.keras.models import load_model
+classifier = load_model('Classifier_model.h5')
 
-def is_model_found(file):
-    model_path = Path(file)
-    found = model_path.is_file()
-    if not found:
-        st.write(f"DEBUG: File `{model_path.absolute()}` not found. Let's download it! :arrow_down:")
-        download_model()
-    else:
-        st.write(f"DEBUG: File `{model_path.absolute()}` found! :sunglasses:")
-
-
-model_filename = "Classifier2.pkl"
-is_model_found(model_filename)
-model = pd.read_pickle(model_filename)
-'''
 
 
 
