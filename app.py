@@ -1,8 +1,8 @@
  
 import pickle
 import streamlit as st
-#from keras.utils import pad_sequences
-from keras_preprocessing.sequence import pad_sequences
+from keras.utils import pad_sequences
+#from keras_preprocessing.sequence import pad_sequences
 
 # loading the trained model
 pickle_in = open('Classifier2.pkl', 'rb') 
