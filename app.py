@@ -1,3 +1,7 @@
+
+
+conda install --yes --file requirements.txt
+
 import pickle
 import streamlit as st
 from keras.utils import pad_sequences
