@@ -8,7 +8,7 @@ from keras.utils import pad_sequences
 import pandas as pd
 
 # loading the trained model
-pickle_in = pd.read_pickle('https://github.com/kruthika222/Streamlit-Web-app.git/Classifier2.pkl') 
+pickle_in = pd.read_pickle('Classifier2.pkl') 
 pickle_in_tok = open('tokenizer2.pkl', 'rb') 
 classifier = pickle.load(pickle_in)
 tokenizer = pickle.load(pickle_in_tok)
