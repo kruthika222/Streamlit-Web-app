@@ -35,7 +35,7 @@ model = pd.read_pickle(model_filename)
 
 
 # loading the trained model
-pickle_in = pd.read_pickle('Classifier2.pkl') 
+pickle_in = open('Classifier2.pkl','rb') 
 pickle_in_tok = open('tokenizer2.pkl', 'rb') 
 classifier = pickle.load(pickle_in)
 tokenizer = pickle.load(pickle_in_tok)
